@@ -50,13 +50,12 @@ class Converter {
 
     /**
      * 全角文字を半角文字に変換する。
-     * TODO: Copilotによる自動生成なので間違っているかもしれない。
      */
     private fun String.toHalfWidth(): String {
         // 文字列を1文字ずつに分割し、それぞれを変換
         return this.map { c ->
             // 文字コードを取得
-            val code = c.toInt()
+            val code = c.code
             // 全角文字の場合
             if (code in 0xFF01..0xFF5E) {
                 // 文字コードの差分を取得
