@@ -31,7 +31,7 @@ class ConvertAppFrame : JFrame() {
                         }
 
                         if (selectedFile.exists() && dialogType == SAVE_DIALOG) {
-                            val result = JOptionPane.showConfirmDialog(this, "The file exists, overwrite?", "Existing file", JOptionPane.YES_NO_CANCEL_OPTION)
+                            val result = JOptionPane.showConfirmDialog(this, "同名ファイルが存在します。上書きしますか？", "確認", JOptionPane.YES_NO_CANCEL_OPTION)
                             when (result) {
                                 JOptionPane.YES_OPTION -> super.approveSelection()
                                 JOptionPane.NO_OPTION -> return
